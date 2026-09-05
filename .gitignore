@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+.pytest_cache/
+.venv/
+venv/
+.env
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Private/raw/derived data
+*.xlsx
+*.xls
+*.xlsm
+*.nc
+*.netcdf
+*.parquet
+*.feather
+*.duckdb
+*.gz
+
+# Fitted models / prediction artifacts
+*.joblib
+*.pkl
+*.pickle
+*.npy
+*.npz
+
+# Generated analysis output directories
+results/
+outputs/
+figures/
+**/checkpoints/
+**/*.part
+
+# Local path/config overrides
+config/paths.local.json

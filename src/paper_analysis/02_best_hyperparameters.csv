@@ -1,0 +1,7 @@
+﻿model,mean_cv_rmse,std_cv_rmse,best_parameters_json,cv_training_rows,final_training_rows
+LGBM,0.0318638776198811,0.0007686144871477,"{""colsample_bytree"": 0.885139821694712, ""learning_rate"": 0.019703006609166535, ""max_depth"": -1, ""min_child_samples"": 22, ""n_estimators"": 5000, ""num_leaves"": 125, ""reg_alpha"": 0.0, ""reg_lambda"": 1.7654505761873725e-06, ""subsample"": 0.8266491436942633}",100000,391696
+RF,0.0343829205614117,0.0007951765681466,"{""bootstrap"": true, ""max_depth"": 24, ""max_features"": 0.7344727825741865, ""max_samples"": 0.9996647448438971, ""min_samples_leaf"": 2, ""min_samples_split"": 4, ""n_estimators"": 350}",100000,391696
+XGB,0.0349540251717848,0.0006745245706875,"{""colsample_bytree"": 0.8536200185424345, ""gamma"": 1.9325741452437745e-05, ""learning_rate"": 0.02750282972178326, ""max_depth"": 6, ""min_child_weight"": 7.4995903226018, ""n_estimators"": 5000, ""reg_alpha"": 0.1, ""reg_lambda"": 0.00064210959085152, ""subsample"": 0.6869323819257201}",100000,391696
+ANN,0.035846183740736,0.0004975937909229,"{""activation"": ""tanh"", ""alpha"": 0.00021379361622468837, ""batch_size"": 1024, ""beta_1"": 0.8568722880409155, ""beta_2"": 0.9847493123423885, ""hidden_layer_sizes"": [256, 128, 64], ""learning_rate_init"": 0.0015779596506794449}",100000,391696
+DT,0.0523218479180206,0.0014712321281612,"{""ccp_alpha"": 1e-07, ""max_depth"": 18, ""max_features"": 0.8552527237322742, ""min_samples_leaf"": 7, ""min_samples_split"": 26}",100000,391696
+LR,0.0883384708064478,0.0004849060459597,{},100000,391696

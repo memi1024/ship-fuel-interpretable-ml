@@ -1,0 +1,19 @@
+# Core numerical / modelling stack
+numpy>=2.2,<3
+pandas>=2.2,<4
+scipy>=1.15,<2
+scikit-learn>=1.6,<2
+xgboost>=2.1,<4
+lightgbm>=4.5,<5
+statsmodels>=0.14,<0.15
+shap>=0.50,<0.53
+joblib>=1.4,<2
+matplotlib>=3.9,<4
+optuna>=4,<5
+
+# Data / ERA5 / I/O
+cdsapi>=0.7,<1
+netCDF4>=1.7,<2
+openpyxl>=3.1,<4
+python-calamine>=0.3,<1
+duckdb>=1.1,<2

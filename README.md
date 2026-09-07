@@ -91,5 +91,20 @@ python 05_bulk_era5_control.py \
 ├── requirements.txt
 └── .gitignore
 ```
+## Hyperparameter provenance
 
+The canonical manuscript reproduction workflow does not retune the
+base-model hyperparameters. `04_reproduce_paper.py` loads the frozen
+registry in `src/paper_analysis/02_best_hyperparameters.csv`.
+
+The manuscript base-model hyperparameters were originally selected
+within the outer-training data using five-fold stratified
+cross-validation, with stratification based on vessel type and binned
+fuel-consumption quantiles. Ridge-Interaction regularisation was selected
+separately using trajectory-group GroupKFold.
+
+The standalone grouped-fold tuning helper retained in
+`f31_core_memory_safe.py` was not the historical producer of the
+manuscript registry and should not be used to infer the tuning design
+underlying the reported manuscript results.
 Input datasets are supplied through the command-line paths shown above.

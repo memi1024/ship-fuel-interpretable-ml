@@ -23,6 +23,13 @@ Design principles
 The script is intentionally defensive about column naming. It resolves common aliases,
 prints the mapping, and writes it to run_manifest.json. If a required field cannot be
 resolved, execution stops with a clear error rather than silently guessing.
+
+F31 empirical-analysis utilities.
+
+The canonical manuscript reproduction workflow loads the frozen
+hyperparameter registry and does not rerun the standalone tuning
+utilities retained in this module. Those utilities should not be
+interpreted as the historical producer of the manuscript registry.
 """
 
 from __future__ import annotations
@@ -1014,7 +1021,29 @@ def suggest_params(trial: optuna.Trial, name: str) -> Dict:
         }
     raise ValueError(name)
 
-
+# -------------------------------------------------------------------------
+# PROVENANCE NOTE
+#
+# This is a standalone/generic tuning helper. It was NOT the historical
+# producer of the frozen hyperparameter registry used in the manuscript.
+#
+# The manuscript base-model hyperparameters were selected within the
+# outer-training data using five-fold stratified cross-validation, with
+# stratification based on vessel type and binned fuel-consumption quantiles.
+#
+# Ridge-Interaction regularisation was selected separately using
+# trajectory-group GroupKFold.
+#
+# The canonical manuscript reproduction entry point,
+#     04_reproduce_paper.py
+# loads the frozen registry:
+#     src/paper_analysis/02_best_hyperparameters.csv
+# directly and does not retune the base models.
+#
+# Therefore, the grouped-fold logic retained in this standalone helper
+# should not be used to infer the historical tuning design underlying
+# the manuscript results.
+# -------------------------------------------------------------------------
 def three_stage_tune(
     name: str,
     X_train: pd.DataFrame,

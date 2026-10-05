@@ -1,0 +1,17 @@
+# Additional dependencies used by the reviewer-revision and ERA5 workflows.
+# Install together with the repository's existing requirements.
+cdsapi
+joblib
+lightgbm
+netCDF4
+numpy
+openpyxl
+optuna
+pandas
+patsy
+scikit-learn
+scipy
+shap
+statsmodels
+xarray
+xgboost
